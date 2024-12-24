@@ -4,14 +4,15 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const sidebarVariants = {
   hidden: {
-    x: "100%", // Inicialmente fora da tela à direita
+    x: "100%",
     opacity: 0,
   },
   visible: {
-    x: "0%", // Entra na tela pela direita
+    x: "0%",
     opacity: 1,
     transition: {
       type: "spring",
@@ -39,13 +40,15 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center mx-6 md:mx-10 py-4">
           {/* Logo */}
-          <Image
-            src="/images/mla.png"
-            width={190}
-            height={40}
-            alt="MLA Logo"
-            priority
-          />
+          <Link href={"/"}>
+            <Image
+              src="/images/mla.png"
+              width={190}
+              height={40}
+              alt="MLA Logo"
+              priority
+            />
+          </Link>
 
           {/* Menu Icon */}
           <Image

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className='min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden bg-[url("/images/bg.png")]'>
+    <div className='min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden bg-[url("/images/bg.png")] text-white'>
       <Navbar />
       <div className="text-center py-4 px-6 md:px-32 md:py-20">
         <h1 className="text-5xl sm:text-6xl md:text-[82px] font-bold">

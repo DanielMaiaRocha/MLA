@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const About = () => {
+const AboutMla = () => {
   return (
     <div
       className="flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden text-white"
@@ -21,17 +21,8 @@ const About = () => {
         resonates with global audiences. Together, we break barriers and connect
         creators with viewers worldwide.
       </h2>
-      <Link href={"/pages/about"} className="text-[#9A9A9A] underline">See more</Link>
-      <div className="animate-bounce mt-10">
-        <Image
-          src={"/images/seta-baixo.svg"}
-          width={40}
-          height={40}
-          alt="Seta para baixo"
-        />
-      </div>
     </div>
   );
 };
 
-export default About;
+export default AboutMla;
