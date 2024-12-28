@@ -2,6 +2,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Localization from "./components/Localization";
+import { Header } from "./components/Navbar";
 import News from "./components/News";
 import Partners from "./components/Partners";
 import Powered from "./components/Powered";
@@ -9,7 +10,8 @@ import Powered from "./components/Powered";
 
 export default function Home() {
   return (
-    <div className="w-full overflow-hidden">
+    <>
+      <Header/>
       <Hero />
       <About />
       <Localization />
@@ -17,6 +19,6 @@ export default function Home() {
       <News />
       <Powered />
       <Footer />
-    </div>
+    </>
   );
 }

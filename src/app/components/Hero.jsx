@@ -1,25 +1,41 @@
+"use client";
+
 import React from "react";
-import Navbar from "./Navbar";
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+// Definir as variantes para o efeito de entrada da esquerda
+const textVariants = {
+  hidden: {
+    x: "-100%",
+    opacity: 0,
+  },
+  visible: {
+    x: "0%",
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      damping: 20,
+    },
+  },
+};
 
 const Hero = () => {
   return (
-    <div className='min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden bg-[url("/images/bg.png")] text-white'>
-      <Navbar />
-      <div className="text-center py-4 px-6 md:px-32 md:py-20">
-        <h1 className="text-5xl sm:text-6xl md:text-[82px] font-bold">
-          ML<span className="text-[#E6C88A]">A</span>
+    <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden bg-[url('/images/bg.png')] text-white">
+      <motion.div
+        className="absolute bottom-16 left-8 px-4"
+        variants={textVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold max-w-[34rem]">
+          A Trusted Network for{" "}
+          <span className="text-[#E6C88A]">Global</span> Audiovisual Localization
         </h1>
-        <h3 className="max-w-[32rem] mx-auto text-center text-lg sm:text-md md:text-base mt-10 p-2">
-          The{" "}
-          <span className="text-[#E6C88A]">Media Localization Alliance</span>{" "}
-          (MLA) is a global organization that unites industry leaders in
-          dubbing, subtitling, and content localization. MLA ensures
-          high-quality, culturally adapted media for audiences worldwide through
-          collaboration and innovation.
-        </h3>
-      </div>
-      <div className="mt-8">
+      </motion.div>
+      <div className="absolute bottom-4 flex justify-center w-full">
         <div className="animate-bounce">
           <Image src={"/images/seta-baixo.svg"} width={40} height={40} alt="Seta para baixo" />
         </div>

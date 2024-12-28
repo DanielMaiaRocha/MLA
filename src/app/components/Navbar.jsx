@@ -1,109 +1,62 @@
-"use client";
+import React from "react";
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { navVariants } from "../utils/motion";
-import Image from "next/image";
-import Link from "next/link";
-
-const sidebarVariants = {
-  hidden: {
-    x: "100%",
-    opacity: 0,
-  },
-  visible: {
-    x: "0%",
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 80,
-      damping: 20,
-    },
-  },
-};
-
-const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
+export const Header = () => {
   return (
-    <>
-      {/* Navbar */}
-      <motion.nav
-        variants={navVariants}
-        initial="hidden"
-        whileInView="show"
-        className="absolute top-0 left-0 w-full z-10 bg-transparent"
-      >
-        <div className="flex justify-between items-center mx-6 md:mx-10 py-4">
-          {/* Logo */}
-          <Link href={"/"}>
-            <Image
-              src="/images/mla.png"
-              width={190}
-              height={40}
-              alt="MLA Logo"
-              priority
-            />
-          </Link>
-
-          {/* Menu Icon */}
-          <Image
-            src="/images/menu.svg"
-            width={25}
-            height={25}
-            alt="Menu Icon"
-            className="cursor-pointer"
-            onClick={toggleSidebar}
-          />
-        </div>
-      </motion.nav>
-
-      {/* Sidebar */}
-      {isSidebarOpen && (
-        <motion.div
-          variants={sidebarVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          className="fixed top-0 right-0 h-screen w-36 max-w-xs bg-[#18294E] text-[#E6C88A] z-20 shadow-lg flex justify-center items-center"
-        >
-          <div className="flex flex-col h-full">
-            {/* Close Icon */}
-            <div className="flex justify-end p-2 mt-10">
-              <Image
-                src="/images/close.svg"
-                width={25}
-                height={25}
-                alt="Close Icon"
-                className="cursor-pointer"
-                onClick={toggleSidebar}
+    <header className="absolute top-0 left-0 w-full z-20 bg-transparent">
+      <div className="py-5">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <a href="#Hero">
+              <img
+                src="/images/mla.png"
+                alt="Saas Logo"
+                height="30"
+                width="200"
               />
-            </div>
+            </a>
 
-            {/* Sidebar Links */}
-            <ul className="flex flex-col gap-6 p-6">
-              <li className="hover:text-gray-400 cursor-pointer">Home</li>
-              <li className="hover:text-gray-400 cursor-pointer">About</li>
-              <li className="hover:text-gray-400 cursor-pointer">Services</li>
-              <li className="hover:text-gray-400 cursor-pointer">Contact</li>
-            </ul>
+            {/* Mobile Menu Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 md:hidden text-white cursor-pointer"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4 5h16a1 1 0 110 2H4a1 1 0 110-2zm0 6h16a1 1 0 110 2H4a1 1 0 110-2zm0 6h16a1 1 0 110 2H4a1 1 0 110-2z"
+                clipRule="evenodd"
+              />
+            </svg>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex gap-6 text-white items-center">
+              <a href="#About" className="hover:text-[#E6C88A]">
+                About
+              </a>
+              <a href="#Members" className="hover:text-[#E6C88A]">
+                Members
+              </a>
+              <a href="#News" className="hover:text-[#E6C88A]">
+                News
+              </a>
+              <a href="#LinkedIn" className="hover:text-[#E6C88A]">
+                LinkedIn
+              </a>
+              <a href="#Help" className="hover:text-[#E6C88A]">
+                Help
+              </a>
+              <a
+                href="/login"
+                className="bg-[#E6C88A] text-white px-4 py-2 rounded-lg font-medium"
+              >
+                Login
+              </a>
+            </nav>
           </div>
-        </motion.div>
-      )}
-
-      {/* Backdrop */}
-      {isSidebarOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 z-10"
-          onClick={toggleSidebar}
-        ></div>
-      )}
-    </>
+        </div>
+      </div>
+    </header>
   );
 };
-
-export default Navbar;
