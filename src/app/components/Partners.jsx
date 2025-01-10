@@ -1,57 +1,71 @@
 "use client";
 import React, { useState } from "react";
-import PartnersCard from "./PartnersCard";
-import PartnersTag from "./PartnersTag";
+import PartnersCardd from "./PartnersCardd";
 
 const projectsData = [
   {
     id: "1",
     title: "Alcateia",
-    country: "Brasil",
-    address:"Rua General Barbosa Lima 39",
     image: "/images/alcateia.jpg",
-    tag: ["All", "Web", "Mobile"],
-    previewURL: "https://alcateiaaudiovisual.com.br/",
-  },
-  {
-    id: "3",
-    title: "Alcateia",
-    country: "Brasil",
-    address:"Rua General Barbosa Lima 39",
-    image: "/images/alcateia.jpg",
-    tag: ["All", "Web", "Mobile"],
-    previewURL: "https://alcateiaaudiovisual.com.br/",
+    description: "A project showcasing a pack of creative developers.",
+    country: "Brazil",
+    state: "São Paulo",
+    tpnBadge: "gold",
+    dolbyAtmos: true,
+    siteURL: "https://react-site-alca.vercel.app",
+    tag: ["All", "Brazil"],
   },
   {
     id: "2",
     title: "Alcateia",
-    country: "Brasil",
-    address:"Rua General Barbosa Lima 39",
     image: "/images/alcateia.jpg",
-    tag: ["All", "Web", "Mobile"],
-    previewURL: "https://alcateiaaudiovisual.com.br/",
+    description: "A project showcasing a pack of creative developers.",
+    country: "Brazil",
+    state: "São Paulo",
+    tpnBadge: "gold",
+    dolbyAtmos: true,
+    siteURL: "https://react-site-alca.vercel.app",
+    tag: ["All", "Brazil"],
+  },
+  {
+    id: "3",
+    title: "Alcateia",
+    image: "/images/alcateia.jpg",
+    description: "A project showcasing a pack of creative developers.",
+    country: "Brazil",
+    state: "São Paulo",
+    tpnBadge: "gold",
+    dolbyAtmos: true,
+    siteURL: "https://react-site-alca.vercel.app",
+    tag: ["All", "Brazil"],
   },
   {
     id: "4",
     title: "Alcateia",
-    country: "Brasil",
-    address:"Rua General Barbosa Lima 39",
     image: "/images/alcateia.jpg",
-    tag: ["All", "Web", "Mobile"],
-    previewURL: "https://alcateiaaudiovisual.com.br/",
+    description: "A project showcasing a pack of creative developers.",
+    country: "Brazil",
+    state: "São Paulo",
+    tpnBadge: "gold",
+    dolbyAtmos: true,
+    siteURL: "https://react-site-alca.vercel.app",
+    tag: ["All", "Brazil"],
   },
   {
     id: "5",
     title: "Alcateia",
-    country: "Brasil",
-    address:"Rua General Barbosa Lima 39",
     image: "/images/alcateia.jpg",
-    tag: ["All", "Web", "Mobile"],
-    previewURL: "https://alcateiaaudiovisual.com.br/",
+    description: "A project showcasing a pack of creative developers.",
+    country: "Brazil",
+    state: "São Paulo",
+    tpnBadge: "gold",
+    dolbyAtmos: true,
+    siteURL: "https://react-site-alca.vercel.app",
+    tag: ["All", "Brazil"],
   },
 ];
 
-const Partners = () => {
+const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
 
   const handleTagChange = (newTag) => {
@@ -61,29 +75,31 @@ const Partners = () => {
   const filteredProject = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
+
   return (
-    <>
-    <div className="flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden text-white">
-      <h5 className="text-[#9A9A9A]">| MLA Partners</h5>
-      <h1 className="text-5xl font-bold">
-      <span className="text-[#E6C88A]">Our</span> Partner Infos
+    <div className="py-8 px-4 xl:gap sm:py-16 xl:px-16 flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden text-white">
+      <h5 className="text-[#9A9A9A]">| MLA Members</h5>
+      <h1 className="text-center text-4xl font-bold text-[#E6C88A]  mt-4">
+        Members
       </h1>
-      <h2 className="text-xl mt-5 mb-10">Here you can see some off our partners and go to their website</h2>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12 justify-between m-10">
         {filteredProject.map((project) => (
-          <PartnersCard
+          <PartnersCardd
             key={project.id}
             title={project.title}
-            address={project.address}
-            country={project.country}
+            description={project.description}
             imgUrl={project.image}
-            previewURL={project.previewURL}
+            country={project.country}
+            state={project.state}
+            tpnBadge={project.tpnBadge}
+            dolbyAtmos={project.dolbyAtmos}
+            siteURL={project.siteURL}
           />
         ))}
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 
-export default Partners;
+export default ProjectsSection;

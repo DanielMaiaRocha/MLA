@@ -25,12 +25,12 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden bg-[url('/images/bg.png')] text-white">
       <motion.div
-        className="absolute bottom-16 left-8 px-4"
+        className="absolute bottom-32 left-32 px-4"
         variants={textVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold max-w-[34rem]">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold opacity-80">
           A Trusted Network for{" "}
           <span className="text-[#E6C88A]">Global</span> Audiovisual Localization
         </h1>
