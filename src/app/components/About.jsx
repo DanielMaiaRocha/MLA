@@ -13,13 +13,9 @@ const About = () => {
         About <span className="text-[#E6C88A]">US</span>
       </h1>
       <h2 className="flex mt-10 max-w-[44rem] text-center p-4 font-medium">
-        The Media Localization Alliance (MLA) unites leading dubbing studios
-        from around the world to bring stories to life across languages and
-        cultures. With a presence in key countries renowned for dubbing, MLA
-        fosters collaboration and excellence, ensuring high-quality
-        localization, compliance with content securities best practices that
-        resonates with global audiences. Together, we break barriers and connect
-        creators with viewers worldwide.
+        The Media Localization Alliance
+  
+The Media Localization Alliance (MLA) is a free,  global non-profit organization with the vision of creating an information hub where Trusted Partner Network (TPN) members  operating TPN certified dubbing studios can access a collaborative network of nearly 50 studios from around the world, fostering closer connections and mutual growth opportunities.
       </h2>
       <Link href={"/pages/about"} className="text-[#9A9A9A] underline">See more</Link>
       <div className="animate-bounce mt-10">
