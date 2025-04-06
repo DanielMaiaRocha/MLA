@@ -14,7 +14,6 @@ function Page() {
         <AboutPage />
         <AboutMla />
         <Objectives />
-        <Creations />
         <Footer />
    </main>
   );

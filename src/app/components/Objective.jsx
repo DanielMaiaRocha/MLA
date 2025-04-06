@@ -13,13 +13,14 @@ const Objectives = () => {
          <span className="text-[#E6C88A]">Objectives</span>
       </h1>
       <h2 className="flex mt-10 max-w-[44rem] text-center p-4 font-medium">
-        The Media Localization Alliance (MLA) unites leading dubbing studios
-        from around the world to bring stories to life across languages and
-        cultures. With a presence in key countries renowned for dubbing, MLA
-        fosters collaboration and excellence, ensuring high-quality
-        localization, compliance with content securities best practices that
-        resonates with global audiences. Together, we break barriers and connect
-        creators with viewers worldwide.
+      MLA will serve as a valuable showcase for demonstrating the potential of new technologies that reduce costs and 
+streamline operations, resulting in faster turnaround times and profitability.
+<br />
+<br />
+A nucleus of TPN-certified studios compliant with MPAA standards (the vision), establishes a solid foundation for attracting major clients, therefore strengthening the group’s position in the global localization market. This concept is based on the premise that digital transformation is essential for the survival and growth of dubbing companies, their staff and production talent.
+<br />
+<br />
+Through MLA, studios from around the world will have the opportunity to collaborate directly, breaking down barriers and joining forces to overcome challenges and meet the demands of the industry’s new reality.
       </h2>
       <div className=" mt-10">
         <Image

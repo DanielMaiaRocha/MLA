@@ -17,52 +17,29 @@ const projectsData = [
   },
   {
     id: "2",
-    title: "Alcateia",
-    image: "/images/alcateia.jpg",
-    description: "A project showcasing a pack of creative developers.",
-    country: "Brazil",
-    state: "São Paulo",
+    title: "Voxx Studios",
+    image: "/images/voxx.png",
+    description: "is an award-winning dubbing studio connecting the world’s voices through our shared stories",
+    country: "USA",
+    state: "Califonia",
     tpnBadge: "gold",
     dolbyAtmos: true,
-    siteURL: "https://react-site-alca.vercel.app",
-    tag: ["All", "Brazil"],
+    siteURL: "https://www.voxxstudios.com/",
+    tag: ["All", "USA"],
   },
   {
     id: "3",
-    title: "Alcateia",
-    image: "/images/alcateia.jpg",
-    description: "A project showcasing a pack of creative developers.",
+    title: "Bravo",
+    image: "/images/bravo.jpg",
+    description: "Bravo Studios, based in Rio since 1998, offers localization and accessibility services in Portuguese, Spanish, and English for TV, film, and VOD, through a trusted network across the U.S. and Latin America.",
     country: "Brazil",
-    state: "São Paulo",
+    state: "Rio de Janeiro",
     tpnBadge: "gold",
     dolbyAtmos: true,
-    siteURL: "https://react-site-alca.vercel.app",
+    siteURL: "https://bravostudios.tv/pt/",
     tag: ["All", "Brazil"],
   },
-  {
-    id: "4",
-    title: "Alcateia",
-    image: "/images/alcateia.jpg",
-    description: "A project showcasing a pack of creative developers.",
-    country: "Brazil",
-    state: "São Paulo",
-    tpnBadge: "gold",
-    dolbyAtmos: true,
-    siteURL: "https://react-site-alca.vercel.app",
-    tag: ["All", "Brazil"],
-  },
-  {
-    id: "5",
-    title: "Alcateia",
-    image: "/images/alcateia.jpg",
-    description: "A project showcasing a pack of creative developers.",
-    country: "Brazil",
-    state: "São Paulo",
-    tpnBadge: "gold",
-    dolbyAtmos: true,
-    siteURL: "https://react-site-alca.vercel.app",
-    tag: ["All", "Brazil"],
-  },
+  
 ];
 
 const ProjectsSection = () => {
@@ -83,7 +60,7 @@ const ProjectsSection = () => {
         Members
       </h1>
 
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12 justify-between m-10">
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12 justify-between m-10 bg-repeat-none">
         {filteredProject.map((project) => (
           <PartnersCardd
             key={project.id}

@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#Hero">
+            <a href="/">
               <img
                 src="/images/mla.png"
                 alt="Saas Logo"
